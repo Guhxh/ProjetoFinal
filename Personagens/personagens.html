@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../favicon/Silent_Hill_f_logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Css/index.css"
+    >
+    <title>Personagens</title>
+</head>
+<body>
+    <header>
+    <button class="menuButton" onclick="menu()" style="all: unset; color: #fff; cursor: pointer;"><i class="fa-solid fa-bars"></i></button>
+    <h1>Você já não esteve aqui?</h1>
+  </header>
+  
+  <aside class="sidebar hidden">
+    <nav>
+      <a href="../Perfil/perfil.html">Perfil</a>
+      <a href="../Personagens/personagens.html">Personagens</a>
+      <a href="../Galeria/galeria.html">Galeria</a>
+      <a href="../Monstros/monstros.html">Monstros</a>
+      <a href="../Formulario/form.html">Formulario</a>
+    </nav>
+  </aside>
+
+
+
+  <main>
+    <h2>Personagens</h2>
+    <section class="personagens">
+  <article class="card-perso">
+    <img src="Personagem-hinako.png" alt="Personagem 1">
+    <section class="info">
+      <h2>Hinako Shimizu</h2>
+      <p>Protagonista do jogo e estudante do ensino médio em Ebisugaoka, nos anos 1960. Adolescente prestes a entrar no campo, lutando para corresponder às expectativas de amigos, família e sociedade. Antes era alegre, mas se tornou reservada e raramente sorri. É a personagem jogável e principal, encarregada de enfrentar o terror que envolve a cidade envolta em névoa.</p>
+    </section>
+  </article>
+
+  <article class="card-perso">
+    <img src="Personagem-rinko.png" alt="Personagem 2">
+    <section class="info">
+      <h2>Rinko Nishida</h2>
+      <p>Amiga de Hinako e Shu, e típica pessoa que gosta de seguir regras e conversar sobre fofocas.. Curiosa sobre os rumos amorosos do círculo social. Desenvolve sentimentos por Shu.</p>
+    </section>
+  </article>
+
+  <article class="card-perso">
+    <img src="Personagem-sakuko.png" alt="Personagem 3">
+    <section class="info">
+      <h2> Sakuko Igarashi</h2>
+      <p>Também amiga de Hinako e Shu; sua família administra um santuário xintoísta local. Tem perfil sonhador, com a cabeça nas nuvens, e ajuda nas funções do santuário.</p>
+    </section>
+  </article>
+
+  <article class="card-perso">
+    <img src="Personagem-shuu.png" alt="Personagem 4">
+    <section class="info">
+      <h2>Shu Iwai</h2>
+      <p>Melhor amigo de infância de Hinako — eles ainda se chamam de “parceiros”. É descrito como uma pessoa moderna para os padrões da época, aceitando amizades com o sexo oposto de forma natural. </p>
+    </section>
+  </article>
+</section>
+
+</section>
+
+  </main>
+
+
+
+
+    <footer style="color: #fff;">
+        <p>&copy; 2025 Fan site não oficial - Creditos  KONAMI</p>
+    </footer>
+  <script>
+    function menu(){
+      const aside = document.querySelector(".sidebar")
+      aside.classList.contains("hidden") ?  aside.classList.remove("hidden") : aside.classList.add("hidden")
+    }
+  </script>
+</body>
+</html>

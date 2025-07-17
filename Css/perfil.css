@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'FONTE2';
+    src: url('../FONTS/SLNTHLE.TTF') format('truetype');
+  }
+  
+  :root {
+    --cor-preta: #111111;
+    --cor-vermelha: #ff0000;
+    --cor-branca: #ffffff;
+    --cor-cinza-escuro: #1a1a1a;
+    --fonte-tema: 'FONTE2', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    background-color: var(--cor-preta);
+    color: var(--cor-branca);
+    font-family: system-ui, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .sidebar {
+    width: 300px;
+    background-color: var(--cor-cinza-escuro);
+    padding: 2rem;
+    border-right: 2px solid var(--cor-vermelha);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    font-family: var(--fonte-tema);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .sidebar h2 {
+    color: var(--cor-vermelha);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--cor-vermelha);
+    padding-bottom: 0.5rem;
+  }
+  
+  .sidebar p {
+    font-size: 0.95rem;
+    border-left: 2px solid var(--cor-vermelha);
+    padding-left: 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .sidebar span {
+    color: var(--cor-branca);
+    font-weight: bold;
+  }
+  
+  main {
+    flex: 1;
+    padding: 3rem;
+    background-image: url("../Background/Video.gif");
+    background-size: cover;
+    background-position: center;
+    font-family: var(--fonte-tema);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-left: 300px;
+    overflow-y: auto;
+  }
+  
+  main h1 {
+    font-size: 2rem;
+    color: var(--cor-vermelha);
+    text-shadow: 0 0 5px var(--cor-vermelha);
+  }
+  
+  main p {
+    color: var(--cor-branca);
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  

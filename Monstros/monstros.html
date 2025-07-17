@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../favicon/Silent_Hill_f_logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Css/index.css"
+    >
+    <title>Monstros</title>
+</head>
+<body>
+    <header>
+    <button class="menuButton" onclick="menu()" style="all: unset; color: #fff; cursor: pointer;"><i class="fa-solid fa-bars"></i></button>
+    <h1>Você já não esteve aqui?</h1>
+  </header>
+  
+  <aside class="sidebar hidden">
+    <nav>
+      <a href="../Perfil/perfil.html">Perfil</a>
+      <a href="../Personagens/personagens.html">Personagens</a>
+      <a href="../Galeria/galeria.html">Galeria</a>
+      <a href="../Monstros/monstros.html">Monstros</a>
+      <a href="../Formulario/form.html">Formulario</a>
+    </nav>
+  </aside>
+
+
+
+  <main>
+    <h2>Monstros</h2>
+    <section class="monstros">
+  <article class="card-monster">
+    <img src="monstro-1.png" alt="Monstro 1">
+    <section class="info">
+      <h2>Kashimahsi</h2>
+      <p>Criatura simbólica no universo do jogo</p>
+    </section>
+  </article>
+
+  <article class="card-monster">
+    <img src="monstro-2.png" alt="Monstro 2">
+    <section class="info">
+      <h2>Ayakakashi</h2>
+      <p>Mistura de grotesco e estético perturbador</p>
+    </section>
+  </article>
+
+  <article class="card-monster">
+    <img src="monstro-3.png" alt="Monstro 3">
+    <section class="info">
+      <h2>Oi-omoi</h2>
+      <p>Nome japonês evocando peso emocional</p>
+    </section>
+  </article>
+
+  <article class="card-monster">
+    <img src="monstro-4.png" alt="Monstro 4">
+    <section class="info">
+      <h2>Ara-abare</h2>
+      <p>Expressa brutalidade, caos e eliminações</p>
+    </section>
+  </article>
+</section>
+
+
+
+  <footer style="color: #fff;">
+        <p>&copy; 2025 Fan site não oficial - Creditos  KONAMI</p>
+    </footer>
+  <script>
+    function menu(){
+      const aside = document.querySelector(".sidebar")
+      aside.classList.contains("hidden") ?  aside.classList.remove("hidden") : aside.classList.add("hidden")
+    }
+  </script>
+</body>
+</html>

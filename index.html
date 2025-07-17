@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="Css/index.css">
+  <link rel="shortcut icon" href="favicon/Silent_Hill_f_logo2.png" type="image/x-icon">
+  <title>Ficha do Sobrevivente</title>
+</head>
+<body>
+  <header>
+    <button class="menuButton" onclick="menu()" style="all: unset; color: #fff; cursor: pointer;"><i class="fa-solid fa-bars"></i></button>
+    <h1>Você já não esteve aqui?</h1>
+  </header>
+  
+  <aside class="sidebar hidden">
+    <nav>
+      <a href="Perfil/perfil.html">Perfil</a>
+      <a href="Personagens/personagens.html">Personagens</a>
+      <a href="Galeria/galeria.html">Galeria</a>
+      <a href="Monstros/monstros.html">Monstros</a>
+      <a href="Formulario/form.html">Formulario</a>
+    </nav>
+  </aside>
+  
+  <main class="principal">
+    <section>
+      <h2>Bem-vindo a <mark>Silent Hill</mark> , <span id="nomeTitulo"></span>...</h2>
+      <p>Explore, mas lembre-se: nem todos saem da cidade...</p>
+      <h3 id="contador"></h3>
+    </section>
+    
+    <section class="trailer">
+      <video src="Trailer/Silent Hill f - Reveal Trailer.mp4" autoplay controls></video>
+    </section>
+    <br>
+    <section>
+    <br>
+    <hr>
+    <br>
+      <h2>Historia</h2>
+      <p>Silent Hill f se passa na década de 1960 na fictícia cidade japonesa de Ebisugaoka, onde a estudante Hinako Shimizu vive. Uma névoa misteriosa toma conta da cidade, transformando-a em um cenário de pesadelo. Hinako deve lutar para sobreviver, enfrentando monstros grotescos e desvendando quebra-cabeças enquanto tenta entender o que aconteceu com sua cidade e seus habitantes. A história explora temas como dúvida, arrependimento, escolhas inescapáveis, e questiona se Hinako abraçará a beleza escondida no terror ou sucumbirá à loucura. </p>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <h2>Franquias De Silent Hill</h2>
+    <section class="franquias">
+      <article class="card">
+        <img src="Franquias/franq1.png" alt="Personagem 1">
+        <p class="card-title">Silent Hill: Downpour  (2012)</p>
+      </article>
+      <article class="card">
+        <img src="Franquias/franq2.png" alt="Personagem 2">
+        <p class="card-title">Silent Hill 4: The Room (2004)</p>
+      </article>
+      <article class="card">
+        <img src="Franquias/franq3.png" alt="Personagem 3">
+        <p class="card-title">Silent Hill: Shattered Memories (2009)</p>
+      </article>
+      <article class="card">
+        <img src="Franquias/franq4.png" alt="Personagem 4">
+        <p class="card-title">Silent Hill 2 (Remake, 2024)</p>
+      </article>
+    </section>
+    
+
+  </main>
+  <footer style="color: #fff;">
+    <p>&copy; 2025 Fan site não oficial - Creditos  KONAMI</p>
+  </footer>
+</body>
+  <script>
+    function menu(){
+      const aside = document.querySelector(".sidebar")
+      aside.classList.contains("hidden") ?  aside.classList.remove("hidden") : aside.classList.add("hidden")
+    }
+
+let visitas = localStorage.getItem('contadorVisitas');
+
+if (visitas === null) {
+  visitas = 1;
+} else {
+  visitas = parseInt(visitas) + 1;
+}
+
+localStorage.setItem('contadorVisitas', visitas);
+
+const contador = document.getElementById('contador');
+
+if (visitas > 5) {
+  contador.innerHTML = `Você já veio aqui ${visitas} vezes...<br><span class="alerta">não está perdido?</span>`;
+} else {
+  contador.textContent = `Você já veio aqui ${visitas} ${visitas === 1 ? 'vez' : 'vezes'}.`;
+}
+
+
+  </script>
+</html>

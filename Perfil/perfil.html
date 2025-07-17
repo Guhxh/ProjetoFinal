@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../Css/perfil.css" />
+  <link rel="shortcut icon" href="../favicon/Silent_Hill_f_logo2.png" type="image/x-icon">
+  <title>Ficha do Sobrevivente</title>
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Perfil</h2>
+    <p><strong>Nome:</strong> <span id="verNome"></span></p>
+    <p><strong>Email:</strong> <span id="verEmail"></span></p>
+    <p><strong>Código:</strong> <span id="verSenha"></span></p>
+    <p><strong>Já jogou:</strong> <span id="verJogou"></span></p>
+  </aside>
+
+  <main>
+    <h1>Bem-vindo a Silent Hill, <span id="nomeTitulo"></span>...</h1>
+    <p>Explore, mas lembre-se: nem todos saem da cidade...</p>
+  </main>
+
+  <script>
+    document.getElementById("verNome").innerText = localStorage.getItem("nome");
+    document.getElementById("verEmail").innerText = localStorage.getItem("email");
+    document.getElementById("verSenha").innerText = localStorage.getItem("senha");
+    document.getElementById("verJogou").innerText = localStorage.getItem("jogou");
+    document.getElementById("nomeTitulo").innerText = localStorage.getItem("nome");
+  </script>
+</body>
+</html>

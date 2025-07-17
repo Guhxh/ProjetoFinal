@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../favicon/Silent_Hill_f_logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Css/form.css" />
+    <title>Silent Hill F</title>
+  </head>
+  <body>
+    <header>
+      <button class="menuButton" onclick="menu()" style="all: unset; color: #fff; cursor: pointer;"><i class="fa-solid fa-bars"></i></button>
+      <h1>Uma Nova Era de Terror Se inicia</h1>
+    </header>
+    <aside class="sidebar hidden">
+      <nav>
+        <a href="../Perfil/perfil.html">Perfil</a>
+        <a href="../Personagens/personagens.html">Personagens</a>
+        <a href="../Galeria/galeria.html">Galeria</a>
+        <a href="../Monstros/monstros.html">Monstros</a>
+        <a href="../Formulario/form.html">Formulario</a>
+      </nav>
+    </aside>
+    <main>
+      <form id="formulario">
+        
+        <label for="nome">Nome do sobrevivente:</label>
+        <input type="text" name="nome" id="nome" required placeholder="Digite seu nome" />
+      
+        <label for="email">Contato de emergência:</label>
+        <input type="email" name="email" id="email" required placeholder="Digite seu contato de emergência" />
+      
+        <label for="password">Código de acesso:</label>
+        <input type="password" name="password" id="password" required maxlength="5" placeholder="Digite seu código de acesso" />
+      
+        <label>Já jogou algum jogo da franquia?</label>
+        <fieldset>
+          <label for="sim">Sim</label>
+          <input type="radio" name="jogou" id="sim" value="Sim" />
+      
+          <label for="nao">Não</label>
+          <input type="radio" name="jogou" id="nao" value="Não" />
+        </fieldset>
+      
+        <button type="submit">Entrar</button>
+      </form>
+    </main>
+    <footer style="color: #fff;">
+      <p>&copy; 2025 Fan site não oficial - Creditos  KONAMI</p>
+    </footer>
+    <script>
+      function menu(){
+      const aside = document.querySelector(".sidebar")
+      aside.classList.contains("hidden") ?  aside.classList.remove("hidden") : aside.classList.add("hidden")
+    }
+      const form = document.getElementById("formulario");
+    
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+    
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("password").value;
+        const jogou = document.querySelector('input[name="jogou"]:checked')?.value || "Não informado";
+    
+        
+        localStorage.setItem("nome", nome);
+        localStorage.setItem("email", email);
+        localStorage.setItem("senha", senha);
+        localStorage.setItem("jogou", jogou);
+    
+        
+        alert("Entrada Aprovada — seus dados foram registrados.");
+        window.location.href = "../index.html";
+      });
+    </script>
+    
+    
+  </body>
+</html>
