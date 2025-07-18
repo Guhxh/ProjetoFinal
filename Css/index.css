@@ -235,7 +235,7 @@ video {
   box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
 }
 @media (max-width: 600px) {
-      .ccard-monster {
+      .card-monster {
         flex-direction: column;
         text-align: center;
       }
